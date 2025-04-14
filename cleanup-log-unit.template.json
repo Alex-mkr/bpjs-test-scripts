@@ -1,0 +1,28 @@
+[
+  {
+    "cleanupId": {
+      "id": "FOTher0HR",
+      "form_data_id": "tlojAw0NR",
+      "form_ui_id": "CARWLQAHg"
+    },
+    "status": 200,
+    "body": {
+      "action": {
+        "message": null,
+        "redirect": null,
+        "type": ""
+      },
+      "data": null,
+      "error": false,
+      "message": "Success Delete Record Form Data"
+    }
+  },
+  {
+    "cleanupId": {
+      "id": "FOTher0HR",
+      "form_data_id": "tlojAw0NR",
+      "form_ui_id": "CARWLQAHg"
+    },
+    "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"message\"\u001b[39m\n\nExpected value: \u001b[32m\"Deleted successfully\"\u001b[39m\nReceived value: \u001b[31m\"Success Delete Record Form Data\"\u001b[39m"
+  }
+]

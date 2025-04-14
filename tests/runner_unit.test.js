@@ -6,15 +6,35 @@ const app = process.env.BASE_URL;
 const authToken = process.env.AUTH_TOKEN;
 const unitPath = path.join(__dirname, "../scripts/units");
 
+// function loadTestData(directory) {
+//   return fs
+//     .readdirSync(directory)
+//     .filter((file) => file.endsWith(".json"))
+//     .map((file) => {
+//       const filePath = path.join(directory, file);
+//       const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+//       return { file, content };
+//     });
+// }
+
 function loadTestData(directory) {
-  return fs
-    .readdirSync(directory)
-    .filter((file) => file.endsWith(".json"))
-    .map((file) => {
-      const filePath = path.join(directory, file);
-      const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      return { file, content };
+  function getAllJsonFiles(dir) {
+    return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        return getAllJsonFiles(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".json")) {
+        return fullPath;
+      }
+      return [];
     });
+  }
+
+  return getAllJsonFiles(directory).map((filePath) => {
+    const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    const file = path.relative(directory, filePath);
+    return { file, content };
+  });
 }
 
 const testFiles = loadTestData(unitPath);
@@ -145,8 +165,9 @@ describe("Executing Unit Test", () => {
           }
         }
 
+        const fileName = path.basename(file);
         fs.writeFileSync(
-          `./logs/cleanup-log-${file}.json`,
+          `./logs/cleanup-log-${fileName}`,
           JSON.stringify(cleanupLog, null, 2),
           "utf-8"
         );
