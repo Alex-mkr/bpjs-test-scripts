@@ -1,0 +1,215 @@
+[
+  {
+    "case_no": "1",
+    "description": "TEMPLATE_FILE",
+    "sequence": [
+      {
+        "name": "Master Category",
+        "variable": "A",
+        "path": "/set",
+        "method": "POST",
+        "payload": {
+          "page_id": 41186,
+          "form_ui_id": "CARWLQAHg",
+          "form_data_id": "tlojAw0NR",
+          "data": {
+            "code": "dupeCode-2",
+            "name": "dupeCode-2",
+            "type_room_id": {
+              "id": "abcdefg",
+              "name": "Medium"
+            },
+            "location_id": {
+              "id": "abcdefg",
+              "name": "Midplaza 1"
+            },
+            "seat_ids": [
+              {
+                "id": "abcdefg",
+                "name": "A1"
+              }
+            ],
+            "availability": false,
+            "id_room": ""
+          }
+        },
+        "output_structure": {
+          "data": {
+            "form_data_id": "tlojAw0NR",
+            "form_ui_id": "CARWLQAHg",
+            "multiple_form_ui_id": "",
+            "data": {
+              "_id": "67fbafface471e4fcd6a50b2",
+              "availability": false,
+              "code": "dupeCode-2",
+              "company_id": 25486,
+              "created_at": 1744547834474,
+              "created_by": 183027,
+              "id": "GCWydl0Hg",
+              "id_room": "GCWydl0Hg",
+              "location_id": {
+                "id": "of4d1w0HR",
+                "name": "Midplaza 1"
+              },
+              "name": "dupeCode-2",
+              "seat_ids": [
+                {
+                  "id": "G3QpJwAHg",
+                  "name": "A1"
+                }
+              ],
+              "type_room_id": {
+                "id": "MGOx1w0HR",
+                "name": "Medium"
+              },
+              "updated_at": 1744547834474,
+              "updated_by": 183027
+            }
+          },
+          "error": false,
+          "invalid_field": null,
+          "is_valid": true,
+          "message": "Success Set Record Form Data"
+        }
+      },
+      {
+        "name": "Master Location",
+        "variable": "B",
+        "path": "/set",
+        "method": "POST",
+        "payload": {
+          "page_id": 41186,
+          "form_ui_id": "CARWLQAHg",
+          "form_data_id": "tlojAw0NR",
+          "data": {
+            "code": "dupeCode-2",
+            "name": "dupeCode-2",
+            "type_room_id": {
+              "id": "abcdefg",
+              "name": "Medium"
+            },
+            "location_id": {
+              "id": "abcdefg",
+              "name": "Midplaza 1"
+            },
+            "seat_ids": [
+              {
+                "id": "abcdefg",
+                "name": "A1"
+              }
+            ],
+            "availability": false,
+            "id_room": ""
+          }
+        },
+        "output_structure": {
+          "data": {
+            "form_data_id": "tlojAw0NR",
+            "form_ui_id": "CARWLQAHg",
+            "multiple_form_ui_id": "",
+            "data": {
+              "_id": "67fbafface471e4fcd6a50b2",
+              "availability": false,
+              "code": "dupeCode-2",
+              "company_id": 25486,
+              "created_at": 1744547834474,
+              "created_by": 183027,
+              "id": "GCWydl0Hg",
+              "id_room": "GCWydl0Hg",
+              "location_id": {
+                "id": "of4d1w0HR",
+                "name": "Midplaza 1"
+              },
+              "name": "dupeCode-2",
+              "seat_ids": [
+                {
+                  "id": "G3QpJwAHg",
+                  "name": "A1"
+                }
+              ],
+              "type_room_id": {
+                "id": "MGOx1w0HR",
+                "name": "Medium"
+              },
+              "updated_at": 1744547834474,
+              "updated_by": 183027
+            }
+          },
+          "error": false,
+          "invalid_field": null,
+          "is_valid": true,
+          "message": "Success Set Record Form Data"
+        }
+      },
+      {
+        "name": "Request Reservation",
+        "variable": "C",
+        "path": "/set",
+        "method": "POST",
+        "payload": {
+          "page_id": 41186,
+          "form_ui_id": "CARWLQAHg",
+          "form_data_id": "tlojAw0NR",
+          "data": {
+            "code": "dupeCode-2",
+            "name": "dupeCode-2",
+            "type_room_id": {
+              "id": "var A",
+              "name": "Medium"
+            },
+            "location_id": {
+              "id": "var B",
+              "name": "Midplaza 1"
+            },
+            "seat_ids": [
+              {
+                "id": "abcdefg",
+                "name": "A1"
+              }
+            ],
+            "availability": false,
+            "id_room": ""
+          }
+        },
+        "output_structure": {
+          "data": {
+            "form_data_id": "tlojAw0NR",
+            "form_ui_id": "CARWLQAHg",
+            "multiple_form_ui_id": "",
+            "data": {
+              "_id": "67fbafface471e4fcd6a50b2",
+              "availability": false,
+              "code": "dupeCode-2",
+              "company_id": 25486,
+              "created_at": 1744547834474,
+              "created_by": 183027,
+              "id": "GCWydl0Hg",
+              "id_room": "GCWydl0Hg",
+              "location_id": {
+                "id": "of4d1w0HR",
+                "name": "Midplaza 1"
+              },
+              "name": "dupeCode-2",
+              "seat_ids": [
+                {
+                  "id": "G3QpJwAHg",
+                  "name": "A1"
+                }
+              ],
+              "type_room_id": {
+                "id": "MGOx1w0HR",
+                "name": "Medium"
+              },
+              "updated_at": 1744547834474,
+              "updated_by": 183027
+            }
+          },
+          "error": false,
+          "invalid_field": null,
+          "is_valid": true,
+          "message": "Success Set Record Form Data"
+        }
+      }
+    ]
+  }
+]
