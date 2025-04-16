@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Master Perusahaan",
+    "path": "/set",
+    "method": "POST",
+    "scenarios": [
+      {
+        "case_no": "R1",
+        "description": "Create Data",
+        "payload": {
+          "page_id": 39241,
+          "multiple_form_ui_id": "6Xm8x5wYp0sZg7rY",
+          "form_data_id": "AXu1AhdHg",
+          "data": {
+            "kode": "testalex",
+            "nama": "testalex",
+            "npwp": 1239999890123457,
+            "provinsi_id": {
+              "id": "lucu",
+              "name": "Sumatera Utara"
+            },
+            "nama_pemotong_pajak": "",
+            "npwp_pemotong_pajak": null,
+            "status": "Inactive"
+          }
+        },
+        "output_structure": {
+          "data": {
+            "form_data_id": "",
+            "form_ui_id": "",
+            "multiple_form_ui_id": "",
+            "data": {
+              "_id": "67ff5831813bb71b98856615",
+              "company_id": 27414,
+              "created_at": 1744787504640,
+              "created_by": 178566,
+              "id": "YjMKRihCDiPCElX0",
+              "id_perusahaan": "YjMKRihCDiPCElX0",
+              "kode": "testalex",
+              "nama": "testalex",
+              "nama_pemotong_pajak": "",
+              "npwp": 1239999890123457,
+              "npwp_pemotong_pajak": null,
+              "provinsi_id": {
+                "id": "SxKzjYTCVe2dIquz",
+                "name": "Sumatera Utara"
+              },
+              "status": "Inactive",
+              "updated_at": 1744787504640,
+              "updated_by": 178566
+            },
+            "metadata": null
+          },
+          "error": false,
+          "invalid_field": null,
+          "is_valid": true,
+          "message": "Success Set Record Form Data"
+        }
+      },
+      {
+        "case_no": "R1",
+        "description": "Create Data",
+        "payload": {
+          "page_id": 39241,
+          "multiple_form_ui_id": "6Xm8x5wYp0sZg7rY",
+          "form_data_id": "AXu1AhdHg",
+          "data": {
+            "kode": "testalex",
+            "nama": "testalex",
+            "npwp": 1239999890123457,
+            "provinsi_id": {
+              "id": "lucu",
+              "name": "Sumatera Utara"
+            },
+            "nama_pemotong_pajak": "",
+            "npwp_pemotong_pajak": null,
+            "status": "Inactive"
+          }
+        },
+        "output_structure": {
+          "data": {
+            "form_data_id": "AXu1AhdHg",
+            "form_ui_id": "",
+            "multiple_form_ui_id": "6Xm8x5wYp0sZg7rY",
+            "data": {
+              "company_id": 27414,
+              "created_at": 1744787698298,
+              "created_by": 178566,
+              "id_perusahaan": "wG08VYiFCj4wfMCU",
+              "kode": "333",
+              "nama": "333",
+              "nama_pemotong_pajak": "",
+              "npwp": 1234567890123456,
+              "npwp_pemotong_pajak": null,
+              "provinsi_id": {
+                "id": "rvpPhuyzEGvBCLIx",
+                "name": "Sulawesi Utara"
+              },
+              "status": "Inactive",
+              "updated_at": 1744787698298,
+              "updated_by": 178566
+            }
+          },
+          "error": true,
+          "is_valid": true,
+          "message": "Nomor NPWP ini sudah terdaftar. Harap periksa kembali."
+        }
+      }
+    ]
+  }
+]

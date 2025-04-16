@@ -6,13 +6,13 @@ const testType = args[0];
 try {
   if (testType === "unit") {
     console.log("Running unit suites...");
-    execSync("npx jest __tests__/unit.test.js", { stdio: "inherit" });
+    execSync("npx jest __tests__/unit.test.js --detectOpenHandles", { stdio: "inherit" });
   } else if (testType === "integration") {
     console.log("Running integration suites...");
-    execSync("npx jest __tests__/integration.test.js", { stdio: "inherit" });
+    execSync("npx jest __tests__/integration.test.js --detectOpenHandles", { stdio: "inherit" });
   } else {
     console.log("Running all test suites...");
-    execSync("npx jest __tests__/unit.test.js __tests__/integration.test.js", { stdio: "inherit" });
+    execSync("npx jest __tests__/unit.test.js __tests__/integration.test.js --detectOpenHandles", { stdio: "inherit" });
   }
 } catch (error) {
   console.error("Error running tests:", error.message);
