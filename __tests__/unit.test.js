@@ -47,6 +47,7 @@ describe("Executing Unit Test", () => {
             test(`Case ${scenario.case_no}: ${testGroup.path}`, async () => {
               const startTime = Date.now();
               let result = "PASS";
+              let msg = "";
 
               try {
                 const response = await request(app)
@@ -70,6 +71,18 @@ describe("Executing Unit Test", () => {
                 expect(response.body).toHaveProperty("error");
                 expect(response.body).toHaveProperty("is_valid");
                 expect(response.body).toHaveProperty("message");
+
+                if (scenario.output_structure.data) {
+                  const missingProperties = Object.keys(scenario.output_structure.data).filter(
+                    (key) => !(key in response.body.data)
+                  );
+
+                  if (missingProperties.length > 0) {
+                    throw new Error(
+                      `Response body data is missing the following properties: ${missingProperties.join(", ")}`
+                    );
+                  }
+                }
 
                 expect(response.body.error).toBe(
                   scenario.output_structure.error
@@ -97,6 +110,7 @@ describe("Executing Unit Test", () => {
               } catch (error) {
                 console.error("Test failed:", error.message);
                 result = "FAILED";
+                msg = error.matcherResult ? "Action Rejected" : error.message;
               } finally {
                 const endTime = Date.now();
                 const runtime = endTime - startTime;
@@ -110,6 +124,7 @@ describe("Executing Unit Test", () => {
                   description: scenario.description,
                   runtime,
                   result,
+                  remark: msg,
                 });
               }
             });
